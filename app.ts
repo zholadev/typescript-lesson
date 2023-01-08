@@ -67,3 +67,18 @@ let info: {
 
 console.log(info)
 console.log(getUserEntity(user))
+
+// Arrays in ts
+const skills: string[] = ['dev', 'devops', 'react']
+
+for (const skill of skills) {
+    console.log(skill.toUpperCase())
+}
+
+const skillsRes = skills
+    .filter(s => s !== 'react')
+    .map(s => s + '! ')
+    .reduce((a, b) => a + b)
+
+
+console.log(skillsRes)
