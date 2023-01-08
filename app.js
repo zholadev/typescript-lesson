@@ -57,3 +57,10 @@ const skillsRes = skills
     .map(s => s + '! ')
     .reduce((a, b) => a + b);
 console.log(skillsRes);
+// tuples
+const arr1 = [1, 'asdsa'];
+// const id = arr1[0]
+// const skillName = arr1[1]
+const [id, skillName] = arr1;
+const arr = [123121, 'react', true, false, true];
+console.log(arr);

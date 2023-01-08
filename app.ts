@@ -82,3 +82,15 @@ const skillsRes = skills
 
 
 console.log(skillsRes)
+
+// tuples
+
+const arr1: [number, string] = [1, 'asdsa'];
+// const id = arr1[0]
+// const skillName = arr1[1]
+
+const [id, skillName] = arr1
+
+const arr: [number, string, ...boolean[]] = [123121, 'react', true, false, true]
+
+console.log(arr)
