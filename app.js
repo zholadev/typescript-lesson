@@ -20,3 +20,30 @@ const getSumm = (a, b) => {
 console.log(getFullName('zholaman', 'zhumanov'));
 console.log(getSumm(1242, 4354));
 getFullNameArrow('zholaman', 'zhumanov');
+// Object in ts
+const getUserEntity = (userEntity) => {
+    return `${userEntity.firstname} ${userEntity.lastname}`;
+};
+const user = {
+    firstname: 'Zholaman',
+    lastname: 'Zhumanov',
+    city: 'Pavlodar',
+    age: 24,
+    skills: {
+        dev: true,
+        react: true
+    }
+};
+let info = {
+    'officeId': 1,
+    'isOpened': true,
+    'contacts': {
+        'phone': '3432432',
+        'email': 'adsasdas',
+        'city': {
+            'address': 'asdasdas'
+        }
+    }
+};
+console.log(info);
+console.log(getUserEntity(user));
