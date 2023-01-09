@@ -184,3 +184,71 @@ function checkTypeToBoolean(x) {
     }
     generateError('asdasd');
 }
+// Null in ts
+const ull = null;
+let af = 5;
+let b = af.toString();
+var AdminRole;
+(function (AdminRole) {
+    AdminRole[AdminRole["ADMIN"] = 0] = "ADMIN";
+    AdminRole[AdminRole["ORDINARY"] = 1] = "ORDINARY";
+})(AdminRole || (AdminRole = {}));
+const users = {
+    name: 'asdfasdf',
+    email: 'sadfasdf',
+    login: 'dsafadsf'
+};
+function userToAmin(user) {
+    return {
+        name: user.name,
+        role: 1
+    };
+}
+// Type Guard
+function logId(id) {
+    if (isString(id)) {
+        console.log(id);
+    }
+    else {
+        console.log(id);
+    }
+    id;
+}
+function isString(x) {
+    return typeof x === 'string';
+}
+function isAdmin(user) {
+    return 'role' in user;
+}
+function isAdminAlternative(user) {
+    return user.role !== undefined;
+}
+function setRole(user) {
+    if (isAdmin(user)) {
+        user.role = 0;
+    }
+    else {
+        throw new Error('user is not admin');
+    }
+}
+function isSuccess(res) {
+    if (res.status === StatusCodeTest.SUCCESS) {
+        return true;
+    }
+    return false;
+}
+function getIdFrom(res) {
+    var _a;
+    if (isSuccess(res)) {
+        return res.data.data.databaseId;
+    }
+    else {
+        throw new Error((_a = res.data.data) === null || _a === void 0 ? void 0 : _a.errorMessage);
+    }
+}
+const ag = {};
+let payment = 20;
+payment = { call: 'asdasd' };
+console.log(payment);
+const userName = 'zholadev';
+console.log(userName);

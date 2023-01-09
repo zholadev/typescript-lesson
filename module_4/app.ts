@@ -409,3 +409,31 @@ function getIdFrom(res: Res): number {
         throw new Error(res.data.data?.errorMessage)
     }
 }
+
+// Asserts in Ts
+interface AssertUser {
+    name: string
+}
+
+const ag = {}
+// assertUser(ag)
+// ag.name = 'asdasd'
+//
+// function assertUser(user: unknown): asserts user is AssertUser {
+//     if (typeof user === 'object' && !!user && 'name' in user) {
+//         return;
+//     }
+//
+//     throw new Error('user is not found')
+// }
+
+type Payment = number | {  sum: number  } | {call: string};
+
+let payment: Payment = 20;
+payment = {call: 'asdasd'}
+
+console.log(payment)
+
+const userName = 'zholadev'
+
+console.log(userName)
