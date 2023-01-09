@@ -171,7 +171,6 @@ enum ErrorCode {
 }
 
 interface DataSuccess {
-    status: StatusCodeTest | string,
     data?: {
         databaseId: number,
         sum: number,
@@ -182,7 +181,6 @@ interface DataSuccess {
 
 
 interface DataFailed {
-    status: StatusCodeTest | string,
     data?: {
         errorMessage: string,
         errorCode: ErrorCode | number
@@ -204,3 +202,32 @@ async function getData(req: { sum: number, from: number, to: number }, method: h
 
     return data
 }
+
+
+// Void in typescript
+
+function logVoid(id: string | number): void {
+    console.log(id)
+}
+
+const as = logVoid(1)
+
+type voidFunc = () => void;
+
+const f1: voidFunc = () => {
+
+}
+
+const f2: voidFunc = () => {
+    return true
+}
+
+const bs = f2()
+
+const userSkills = ['asdas', 'asdasd']
+
+const userS = {
+    s: ['']
+}
+
+userSkills.forEach((skill) => userS.s.push(skill))
