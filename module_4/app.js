@@ -22,3 +22,30 @@ function logError(err) {
 }
 logError('is not defined');
 logError(['is', 'no', 'defined']);
+function logObj(obj) {
+    if ('a' in obj) {
+        console.log(obj.a);
+    }
+    else {
+        console.log(obj.b);
+    }
+}
+function logMultipleIds(a, b) {
+    if (a === b) {
+    }
+    else {
+        console.log(a);
+    }
+}
+// Literal Types
+var RequestType;
+(function (RequestType) {
+    RequestType["GET"] = "get";
+    RequestType["POST"] = "post";
+})(RequestType || (RequestType = {}));
+function fetchWithAuth(url, method) {
+}
+let ter = 'sadasd';
+ter = 'sadasd';
+let method = 'post';
+fetchWithAuth('s', method);

@@ -36,7 +36,27 @@ function logObj(obj: { a: number } | { b: number | string }) {
 function logMultipleIds(a: string | number, b: string | boolean) {
     if (a === b) {
 
-    } else { 
+    } else {
         console.log(a)
     }
 }
+
+// Literal Types
+
+enum RequestType {
+    GET = 'get',
+    POST = 'post'
+}
+
+
+function fetchWithAuth(url: string, method: 'post' | 'get') {
+
+}
+
+let ter: 'sadasd' = 'sadasd'
+
+ter = 'sadasd'
+
+let method = 'post'
+
+fetchWithAuth('s', method as 'post')
