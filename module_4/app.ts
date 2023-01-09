@@ -267,3 +267,43 @@ async function getDataS() {
 type f3 = unknown | string
 type f4 = unknown & string
 
+// Never
+function generateError(message: string): never {
+    throw new Error(message)
+}
+
+function dumpError(): never {
+    while (true) {
+
+    }
+}
+
+function rec1(): never {
+    return rec1();
+}
+
+type paymentAction = 'refund' | 'checkout'
+
+function processAction(action: paymentAction) {
+    switch (action) {
+        case "refund":
+            // ...
+            break
+        case 'checkout':
+            // ...
+            break
+        default:
+            const _: never = action
+            throw new Error('not found this type')
+    }
+}
+
+function checkTypeToBoolean(x: string | number): boolean {
+    if (typeof x === "string") {
+        return true
+    } else {
+        return false
+    }
+
+    generateError('asdasd');
+}

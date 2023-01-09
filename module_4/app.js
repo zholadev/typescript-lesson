@@ -151,3 +151,36 @@ function getDataS() {
         }
     });
 }
+// Never
+function generateError(message) {
+    throw new Error(message);
+}
+function dumpError() {
+    while (true) {
+    }
+}
+function rec1() {
+    return rec1();
+}
+function processAction(action) {
+    switch (action) {
+        case "refund":
+            // ...
+            break;
+        case 'checkout':
+            // ...
+            break;
+        default:
+            const _ = action;
+            throw new Error('not found this type');
+    }
+}
+function checkTypeToBoolean(x) {
+    if (typeof x === "string") {
+        return true;
+    }
+    else {
+        return false;
+    }
+    generateError('asdasd');
+}
