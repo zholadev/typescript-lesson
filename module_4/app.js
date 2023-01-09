@@ -59,3 +59,16 @@ const userObj = {
         return '';
     }
 };
+const user2 = {
+    login: 'asdfa@gmail.com',
+    password: 'asdsad'
+};
+function multiply(a, b) {
+    if (!b) {
+        return a * a;
+    }
+    else {
+        return a * b;
+    }
+}
+console.log(multiply(123, 2));
