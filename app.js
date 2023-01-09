@@ -64,3 +64,10 @@ const arr1 = [1, 'asdsa'];
 const [id, skillName] = arr1;
 const arr = [123121, 'react', true, false, true];
 console.log(arr);
+// Readonly in ts
+const skillExample = [123, 'zholadev'];
+const skillExample2 = ['123', 'zholadev'];
+const skillExample3 = ['123', 'zholadev'];
+const skillExample4 = ['123', 'zholadev'];
+let a = 5;
+a = 4;

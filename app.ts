@@ -94,3 +94,15 @@ const [id, skillName] = arr1
 const arr: [number, string, ...boolean[]] = [123121, 'react', true, false, true]
 
 console.log(arr)
+
+
+// Readonly in ts
+const skillExample: readonly [number, string] = [123, 'zholadev']
+const skillExample2: string[] = ['123', 'zholadev']
+const skillExample3: Array<string> = ['123', 'zholadev']
+const skillExample4: ReadonlyArray<string> = ['123', 'zholadev']
+
+let a = 5;
+a = 4;
+
+
