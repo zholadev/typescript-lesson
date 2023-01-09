@@ -307,3 +307,43 @@ function checkTypeToBoolean(x: string | number): boolean {
 
     generateError('asdasd');
 }
+
+// Null in ts
+const ull: null = null
+
+interface UserDataS {
+    name: string
+}
+
+
+let af = 5
+let b: string = af.toString()
+
+enum AdminRole {
+    ADMIN,
+    ORDINARY
+}
+
+interface UserS {
+    name: string,
+    email: string,
+    login: string
+}
+
+const users: UserS = {
+    name: 'asdfasdf',
+    email: 'sadfasdf',
+    login: 'dsafadsf'
+}
+
+interface Admin {
+    name: string,
+    role: number
+}
+
+function userToAmin(user: UserS): Admin {
+    return {
+        name: user.name,
+        role: 1
+    }
+}
