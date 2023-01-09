@@ -71,3 +71,20 @@ const skillExample3 = ['123', 'zholadev'];
 const skillExample4 = ['123', 'zholadev'];
 let a = 5;
 a = 4;
+// Enum in Typescript
+var StatusCode;
+(function (StatusCode) {
+    StatusCode[StatusCode["SUCCESS"] = 1] = "SUCCESS";
+    StatusCode[StatusCode["IN_PROCESS"] = 2] = "IN_PROCESS";
+    StatusCode[StatusCode["FAILED"] = 3] = "FAILED";
+})(StatusCode || (StatusCode = {}));
+const objMessage = {
+    message: 'success',
+    statusCode: StatusCode.SUCCESS,
+};
+if (objMessage.statusCode === StatusCode.SUCCESS) {
+    console.log('done!');
+}
+function action(status) {
+}
+action(StatusCode.SUCCESS);

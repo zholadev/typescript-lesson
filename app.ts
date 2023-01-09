@@ -106,3 +106,24 @@ let a = 5;
 a = 4;
 
 
+// Enum in Typescript
+enum StatusCode {
+    SUCCESS = 1,
+    IN_PROCESS,
+    FAILED
+}
+
+const objMessage = {
+    message: 'success',
+    statusCode: StatusCode.SUCCESS,
+}
+
+if (objMessage.statusCode === StatusCode.SUCCESS) {
+    console.log('done!')
+}
+
+function action(status: StatusCode) {
+
+}
+
+action(StatusCode.SUCCESS)
