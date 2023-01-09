@@ -42,6 +42,9 @@ function logMultipleIds(a: string | number, b: string | boolean) {
 }
 
 // Literal Types
+// Type Aliases
+
+type  httpMethod = 'post' | 'get' | 'put' | 'update'
 
 enum RequestType {
     GET = 'get',
@@ -49,8 +52,8 @@ enum RequestType {
 }
 
 
-function fetchWithAuth(url: string, method: 'post' | 'get') {
-
+function fetchWithAuth(url: string, method: httpMethod) {
+    console.log(url, method)
 }
 
 let ter: 'sadasd' = 'sadasd'
@@ -60,3 +63,25 @@ ter = 'sadasd'
 let method = 'post'
 
 fetchWithAuth('s', method as 'post')
+
+type User = {
+    name: string,
+    age: number,
+    skills: string[]
+}
+
+type Role = {
+    id: number
+}
+
+type UserWithRoles = {
+    user: User,
+    role: Role
+}
+
+const userObj: UserWithRoles = {
+    name: 'asdfasdf',
+    age: 33,
+    skills: ['asda', 'asdas'],
+    id: 12
+}

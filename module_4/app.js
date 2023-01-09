@@ -37,13 +37,13 @@ function logMultipleIds(a, b) {
         console.log(a);
     }
 }
-// Literal Types
 var RequestType;
 (function (RequestType) {
     RequestType["GET"] = "get";
     RequestType["POST"] = "post";
 })(RequestType || (RequestType = {}));
 function fetchWithAuth(url, method) {
+    console.log(url, method);
 }
 let ter = 'sadasd';
 ter = 'sadasd';
