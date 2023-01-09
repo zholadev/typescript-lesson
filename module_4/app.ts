@@ -231,3 +231,39 @@ const userS = {
 }
 
 userSkills.forEach((skill) => userS.s.push(skill))
+
+
+// Unknown
+let input: unknown
+
+input = 3
+input = 'zholadev'
+
+// let resInput: string = input
+
+function run(ins: unknown) {
+    if (typeof ins === 'number') {
+        ins++;
+    } else {
+        ins
+    }
+}
+
+run(input)
+
+async function getDataS() {
+    try {
+        await fetch('')
+    } catch (err) {
+        if (err instanceof Error) {
+            console.log(err.message)
+        }
+
+        const e = err as Error;
+        console.log(e)
+    }
+}
+
+type f3 = unknown | string
+type f4 = unknown & string
+
