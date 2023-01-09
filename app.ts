@@ -150,3 +150,4 @@ async function getFraqs(req: { name: string, city: number, age: QuestionStatus }
 
     return dataRes;
 }
+
