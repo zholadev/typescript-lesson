@@ -49,3 +49,13 @@ let ter = 'sadasd';
 ter = 'sadasd';
 let method = 'post';
 fetchWithAuth('s', method);
+const userObj = {
+    name: 'asdfasdf',
+    age: 33,
+    skills: ['asda', 'asdas'],
+    userId: 12,
+    createdAt: new Date(),
+    log(id) {
+        return '';
+    }
+};

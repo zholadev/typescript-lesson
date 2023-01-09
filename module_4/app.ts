@@ -64,24 +64,49 @@ let method = 'post'
 
 fetchWithAuth('s', method as 'post')
 
-type User = {
+// type User = {
+//     name: string,
+//     age: number,
+//     skills: string[]
+// }
+
+// type Role = {
+//     id: number
+// }
+
+// type UserWithRoles = {
+//     user: User,
+//     role: Role
+// }
+
+interface User {
     name: string,
     age: number,
-    skills: string[]
+    skills: string[],
+
+    log: (id: number) => string
 }
 
-type Role = {
-    id: number
+interface Roles {
+    userId: number
 }
 
-type UserWithRoles = {
-    user: User,
-    role: Role
+interface UserWithRoles extends User, Roles {
+    createdAt: Date
 }
 
 const userObj: UserWithRoles = {
     name: 'asdfasdf',
     age: 33,
     skills: ['asda', 'asdas'],
-    id: 12
+    userId: 12,
+    createdAt: new Date(),
+
+    log(id) {
+        return ''
+    }
+}
+
+interface UserDictionary {
+    [index: number]: User
 }
