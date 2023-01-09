@@ -127,3 +127,26 @@ function action(status: StatusCode) {
 }
 
 action(StatusCode.SUCCESS)
+
+enum QuestionStatus {
+    Published = 'published',
+    Draft = 'draft',
+    Deleted = 'deleted'
+}
+
+async function getFraqs(req: { name: string, city: number, age: QuestionStatus }): Promise<{
+    question: string,
+    id: number,
+    answer: string,
+    status: QuestionStatus,
+    items: string[]
+}[]> {
+    const res = await fetch('/fraqs', {
+        method: 'POST',
+        body: JSON.stringify(req)
+    });
+
+    const dataRes = await res.json()
+
+    return dataRes;
+}
