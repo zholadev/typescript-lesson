@@ -171,7 +171,7 @@ enum ErrorCode {
 }
 
 interface DataSuccess {
-    data?: {
+    data: {
         databaseId: number,
         sum: number,
         from: number,
@@ -181,9 +181,9 @@ interface DataSuccess {
 
 
 interface DataFailed {
-    data?: {
+    data: {
         errorMessage: string,
-        errorCode: ErrorCode | number
+        errorCode: ErrorCode.failed | number
     }
 }
 
@@ -377,5 +377,35 @@ function setRole(user: UserS | Admin) {
         user.role = 0;
     } else {
         throw new Error('user is not admin')
+    }
+}
+
+interface IResponseSuccess {
+    status: StatusCodeTest.SUCCESS,
+    data: DataSuccess
+}
+
+interface IResponseFailed {
+    status: StatusCodeTest.FAILED,
+    data: DataFailed
+}
+
+type t = (res: IResponseSuccess | IResponseFailed) => number;
+
+type Res = IResponseSuccess | IResponseFailed;
+
+function isSuccess(res: Res): res is IResponseSuccess {
+    if (res.status === StatusCodeTest.SUCCESS) {
+        return true
+    }
+
+    return false
+}
+
+function getIdFrom(res: Res): number {
+    if (isSuccess(res)) {
+        return res.data.data.databaseId
+    } else {
+        throw new Error(res.data.data?.errorMessage)
     }
 }
