@@ -55,3 +55,12 @@ const userss = new Clients();
 userss.push(new ClientB('ghost'));
 userss.push(new ClientB('asdas'));
 console.log(userss.toString());
+class Kaz {
+}
+class Kaz2 {
+    constructor(user, kaz) {
+        this.kaz = kaz;
+        this.user = user;
+    }
+}
+// const tot = new Kaz2('Shaman', new Date())
