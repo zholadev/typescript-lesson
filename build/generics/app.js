@@ -36,4 +36,24 @@ const logLine = {
         a: 1
     }
 };
+class Vehicles {
+    constructor(run) {
+        this.run = run;
+    }
+}
+function kmToMiles(vehicle) {
+    vehicle.run = vehicle.run / 0.62;
+    return vehicle;
+}
+class LCV extends Vehicles {
+}
+const vehicle = kmToMiles(new Vehicles(1212));
+const lcv = kmToMiles(new LCV(1212));
+kmToMiles({ run: 123 });
+function logid(id, additionalData) {
+    return {
+        id,
+        data: additionalData
+    };
+}
 //# sourceMappingURL=app.js.map

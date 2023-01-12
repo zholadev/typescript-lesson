@@ -42,3 +42,32 @@ const logLine: ILogLineType<{ a: number }> = {
         a: 1
     }
 }
+
+class Vehicles {
+    run: number
+
+    constructor(run: number) {
+        this.run = run
+    }
+}
+
+function kmToMiles<T extends Vehicles>(vehicle: T): T {
+    vehicle.run = vehicle.run / 0.62
+
+    return vehicle
+}
+
+class LCV extends Vehicles {
+    capacity: number
+}
+
+const vehicle = kmToMiles(new Vehicles(1212))
+const lcv = kmToMiles(new LCV(1212))
+kmToMiles({run: 123})
+
+function logid<T extends string | number, Y>(id: T, additionalData: Y): { id: T, data: Y } {
+    return {
+        id,
+        data: additionalData
+    }
+}
