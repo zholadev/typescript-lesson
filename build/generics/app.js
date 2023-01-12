@@ -29,4 +29,11 @@ function splitHalf(data) {
     const l = data.length / 2;
     return data.splice(0, 1);
 }
+const split = splitHalf;
+const logLine = {
+    timeStamp: new Date(),
+    data: {
+        a: 1
+    }
+};
 //# sourceMappingURL=app.js.map
