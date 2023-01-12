@@ -20,4 +20,13 @@ const check = {
     dive: true,
     kpp: false
 };
+function logMiddleware(data) {
+    console.log(data);
+    return data;
+}
+const ressss = logMiddleware('asdasd');
+function splitHalf(data) {
+    const l = data.length / 2;
+    return data.splice(0, 1);
+}
 //# sourceMappingURL=app.js.map
