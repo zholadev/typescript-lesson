@@ -96,3 +96,26 @@ function sort<T extends IDS>(data: T[], type: sortType = 'asc'): T[] {
 }
 
 console.log(sort(sortData, 'desc'))
+
+
+class Resp<D, E> {
+    data?: D;
+    error?: E;
+
+    constructor(data: D, error: E) {
+        this.data = data;
+        this.error = error
+    }
+}
+
+const resss = new Resp<string, number>('asdsadasd', 0)
+
+class HTTPRES<F> extends Resp<string, number>{
+    code: F
+    
+    setCode(code: F) {
+        this.code = code
+    }
+}
+
+const res3 = new HTTPRES('asdasd', 121)
