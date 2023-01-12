@@ -20,7 +20,6 @@ class Logger {
 }
 class UserLogger {
     pay(paymentId) {
-        ///
     }
     delete() {
     }

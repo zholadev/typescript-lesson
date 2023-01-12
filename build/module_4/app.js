@@ -1,5 +1,4 @@
 "use strict";
-// Union in typescript
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -85,7 +84,6 @@ function testPass(user) {
     var _a;
     const t = (_a = user.pass) === null || _a === void 0 ? void 0 : _a.type;
 }
-// Test 4
 var StatusCodeTest;
 (function (StatusCodeTest) {
     StatusCodeTest["SUCCESS"] = "success";
@@ -107,7 +105,6 @@ function getData(req, method) {
         return data;
     });
 }
-// Void in typescript
 function logVoid(id) {
     console.log(id);
 }
@@ -123,11 +120,9 @@ const userS = {
     s: ['']
 };
 userSkills.forEach((skill) => userS.s.push(skill));
-// Unknown
 let input;
 input = 3;
 input = 'zholadev';
-// let resInput: string = input
 function run(ins) {
     if (typeof ins === 'number') {
         ins++;
@@ -151,7 +146,6 @@ function getDataS() {
         }
     });
 }
-// Never
 function generateError(message) {
     throw new Error(message);
 }
@@ -165,10 +159,8 @@ function rec1() {
 function processAction(action) {
     switch (action) {
         case "refund":
-            // ...
             break;
         case 'checkout':
-            // ...
             break;
         default:
             const _ = action;
@@ -184,7 +176,6 @@ function checkTypeToBoolean(x) {
     }
     generateError('asdasd');
 }
-// Null in ts
 const ull = null;
 let af = 5;
 let b = af.toString();
@@ -204,7 +195,6 @@ function userToAmin(user) {
         role: 1
     };
 }
-// Type Guard
 function logId(id) {
     if (isString(id)) {
         console.log(id);

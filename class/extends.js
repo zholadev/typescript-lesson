@@ -14,7 +14,6 @@ class PersistedPayment extends Paymeent {
         super(id);
     }
     save() {
-        // saved database
     }
     pay(date) {
         super.pay();
@@ -26,7 +25,6 @@ class PersistedPayment extends Paymeent {
 class ClientS {
     constructor() {
         this.name = 'user';
-        // this.name = name
         console.log(this.name);
     }
 }
@@ -63,4 +61,4 @@ class Kaz2 {
         this.user = user;
     }
 }
-// const tot = new Kaz2('Shaman', new Date())
+//# sourceMappingURL=extends.js.map

@@ -15,3 +15,4 @@ class Admin {
 }
 const admin = new Admin(1);
 admin.role = 1;
+//# sourceMappingURL=app.js.map

@@ -15,3 +15,4 @@ class GetLog extends LoggerSecondary {
 }
 const logger = new GetLog();
 logger.logWithDate('zholadev');
+//# sourceMappingURL=abstractTask.js.map

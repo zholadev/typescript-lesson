@@ -11,7 +11,6 @@ class UserController extends Controller {
         console.log(req);
     }
 }
-// new Controller() - get error
 const sa = new UserController();
 sa.handleWithLogs('request');
 //# sourceMappingURL=abstract.js.map

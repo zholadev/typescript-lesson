@@ -8,20 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-class Logger {
-    error(...args) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log(...args);
+const gen = [1, 2, 4];
+function test() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const a = new Promise((resolve, reject) => {
+            resolve(1);
         });
-    }
-    log(...args) {
-        console.log(...args);
-    }
+    });
 }
-class UserLogger {
-    pay(paymentId) {
-    }
-    delete() {
-    }
-}
-//# sourceMappingURL=implements.js.map
+const check = {
+    dive: true,
+    kpp: false
+};
+//# sourceMappingURL=app.js.map

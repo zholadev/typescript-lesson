@@ -21,3 +21,4 @@ class EuroTrack extends Vehicle {
     }
 }
 new Vehicle();
+//# sourceMappingURL=public.js.map

@@ -26,3 +26,4 @@ const paymentS = new PaymentC(1);
 paymentS.unholdPayment();
 const time = paymentS.getPaymentLifeTime();
 console.log(paymentS, time);
+//# sourceMappingURL=methods.js.map

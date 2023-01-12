@@ -58,3 +58,4 @@ cart.deleteToCart(1);
 cart.setDelivery(new HomeDelivery(new Date(), 'asdasdas'));
 console.log(cart);
 console.log(cart.getSum());
+//# sourceMappingURL=task.js.map
