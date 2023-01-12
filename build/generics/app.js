@@ -56,4 +56,20 @@ function logid(id, additionalData) {
         data: additionalData
     };
 }
+const sortData = [
+    { id: 1, name: 'asdas' },
+    { id: 2, name: 'ujtyjh' },
+    { id: 3, name: 'vadxc' }
+];
+function sort(data, type = 'asc') {
+    return data.sort((a, b) => {
+        switch (type) {
+            case "asc":
+                return a.id - b.id;
+            case "desc":
+                return b.id - a.id;
+        }
+    });
+}
+console.log(sort(sortData));
 //# sourceMappingURL=app.js.map

@@ -71,3 +71,28 @@ function logid<T extends string | number, Y>(id: T, additionalData: Y): { id: T,
         data: additionalData
     }
 }
+
+const sortData = [
+    {id: 1, name: 'asdas'},
+    {id: 2, name: 'ujtyjh'},
+    {id: 3, name: 'vadxc'}
+]
+
+interface IDS {
+    id: number;
+}
+
+type sortType = 'asc' | 'desc'
+
+function sort<T extends IDS>(data: T[], type: sortType = 'asc'): T[] {
+    return data.sort((a, b) => {
+        switch (type) {
+            case "asc":
+                return a.id - b.id
+            case "desc":
+                return b.id - a.id
+        }
+    })
+}
+
+console.log(sort(sortData, 'desc'))
